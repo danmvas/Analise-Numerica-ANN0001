@@ -115,20 +115,24 @@ import math
 # x0=-1.16779128
 # numIteracao = 700
 
+###--####--####--####--####--##
+
+# QUESTÃO ESCROTA DA ÁGUA
 
 def f(x):
-  return 1586191*(math.e)**x + (219635/x)*(math.e**(x)-1) - 3406533
+  return 8.11 - math.sqrt(2*9.81*x) * math.tanh(((math.sqrt(2*9.81*x))/(2*8.74))*5.49)
 
 def df(x):
-  return x*3406533+219635
+  return - (3* math.sqrt(109)* math.tanh((1647*math.sqrt(109)*math.sqrt(x))/(2185*2**(5/2))))/(5*2**(3/2)*math.sqrt(x)) - (538569 * (1/(math.cosh((1647*math.sqrt(109)*math.sqrt(x))/(2185* 2**(5/2)))))**2)/174800
 
 numIteracao = 5
-x0 = 1.47
+x0 = 1.86
 
 ###--####--####--####--####--##
 
 #   ZERO DE FUNCAO
 #           Metodo de Newton
+
 # Entrada: estimativa inicial (x0), funcao (f), derivada funcao (df), e numero de iteracoes (numIteracao)
 def metodoNewton(x0,f,df,numIteracao):
   print("Calcular metodo de Newton !!\n\n")

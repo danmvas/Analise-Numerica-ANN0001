@@ -12,6 +12,6 @@ void main(){
     int iteracoes1 = 12;
 
     printf("inferior aqui krl: %lf\n",inferior1);
-    bisection(f, inferior1, superior1, iteracoes1);
+    //bisection(f, inferior1, superior1, iteracoes1);
 
 }

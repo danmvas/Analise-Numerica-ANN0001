@@ -86,19 +86,57 @@ import math
 # x1 = 1.46
 # numIteracao = 5
 
+# def f(x):
+#   r = 4.92
+#   pw = 1000
+#   ps = 76.01
+#   v = (math.pi * x*x)/3 * (3*r - x)
+#   vs = 4/3 * math.pi * r*r*r
+
+#   return pw * (vs - v)- ps *vs
+
+# x0 = 1.63
+# x1 = 7.4
+# numIteracao = 5
+# err = 0
+
+# ###--####--####--####--####--##
+
+# # seção transversal em formato de cone
+
+# def f(x):
+#   l = 4.23
+#   r = 3.97
+#   v = 69.37
+#   return l*(0.5*math.pi*r*r - r*r*math.asin(x/r)-x*math.sqrt(r*r - x*x)) - v
+
+# x0 = 0.49
+# x1 = 3.74
+# numIteracao = 5
+
+# ###--####--####--####--####--##
+
+###--####--####--####--####--##
+
+# particula em repouso numa superfície plana
+
+# def f(x):
+#   g = 9.81
+#   t = 1.43
+#   d = 1.63
+#   return ((math.sinh(x*t) - math.sin(x*t)) * - g/(2*x*x)) - d
+
+# x0 = -4.14
+# x1 = -1.27
+# numIteracao = 5 
+###--####--####--####--####--##
+
 def f(x):
-  r = 4.92
-  pw = 1000
-  ps = 76.01
-  v = (math.pi * x*x)/3 * (3*r - x)
-  vs = 4/3 * math.pi * r*r*r
+  return (6000*x*x - 54420*x + 77119)/500
 
-  return pw * (vs - v)- ps *vs
-
-x0 = 1.63
-x1 = 7.4
+x0 = 0.85
+x1 = 3.38
 numIteracao = 5
-err = 0
 
 ###--####--####--####--####--##
 

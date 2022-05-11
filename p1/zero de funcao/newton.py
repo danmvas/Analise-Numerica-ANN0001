@@ -132,23 +132,52 @@ import math
 
 # ARQUIMEDES ESFERA
 
+# def f(x):
+#   r = 4.92
+#   pw = 1000
+#   ps = 76.01
+#   v = (math.pi * x*x)/3 * (3*r - x)
+#   vs = 4/3 * math.pi * r*r*r
+
+#   return pw * (vs - v)- ps *vs
+
+
+# def df(x):
+#   r = 4.92
+#   return 1000 *math.pi * x * (x - 2 * r)
+
+# x0 = 4.69
+# numIteracao = 5
+
+###--####--####--####--####--##
+
+# particula em repouso numa superfície plana
+
+# def f(x):
+#   g = 9.81
+#   t = 1.43
+#   d = 1.63
+#   return ((math.sinh(x*t) - math.sin(x*t)) * - g/(2*x*x)) - d
+
+# def df(x):
+#   g = 9.81
+#   t = 1.43
+#   return (g * (t * math.cos(t*x) - t * math.cosh(t*x)))/2*x*x - (g*(math.sin(t*x) - math.sinh(t*x)))/x*x*x
+
+# x0 = -1.92
+# numIteracao = 5 
+###--####--####--####--####--##
+
+# caixa de papelao
+
 def f(x):
-  r = 4.92
-  pw = 1000
-  ps = 76.01
-  v = (math.pi * x*x)/3 * (3*r - x)
-  vs = 4/3 * math.pi * r*r*r
-
-  return pw * (vs - v)- ps *vs
-
+  return (6000*x*x - 54420*x + 77119)/500
 
 def df(x):
-  r = 4.92
-  return 1000 *math.pi * x * (x - 2 * r)
+  return (12000*x - 54420)/500
 
-x0 = 4.69
+x0 = 2.56
 numIteracao = 5
-
 
 ###--####--####--####--####--##
 

@@ -302,21 +302,79 @@ import math
 
 # ARQUIMEDES ESFERA
 
+# def f(x):
+#   r = 4.92
+#   pw = 1000
+#   ps = 76.01
+#   v = (math.pi * x*x)/3 * (3*r - x)
+#   vs = 4/3 * math.pi * r*r*r
+
+#   return pw * (vs - v)- ps *vs
+
+# a = 0
+# b = 9.84
+# numIteracao = 12
+# err = 0
+
+# ###--####--####--####--####--##
+
+# # seção transversal em formato de cone
+
+# def f(x):
+#   l = 4.23
+#   r = 3.97
+#   v = 69.37
+#   return l*(0.5*math.pi*r*r - r*r*math.asin(x/r)-x*math.sqrt(r*r - x*x)) - v
+
+# a = 0
+# b = 3.97
+# numIteracao = 12
+# err = 0
+
+###--####--####--####--####--##
+
+# particula em repouso numa superfície plana
+
+# def f(x):
+#   g = 9.81
+#   t = 1.43
+#   d = 1.63
+#   return ((math.sinh(x*t) - math.sin(x*t)) * - g/(2*x*x)) - d
+
+# a = -5.45
+# b = 0.58
+# numIteracao = 12 
+# err = 0
+
+###--####--####--####--####--##
+
+###--####--####--####--####--##
+
+# caixa de papelao
+
+# def f(x):
+#   return (6000*x*x - 54420*x + 77119)/500
+
+# a = 0
+# b = 4.03
+# numIteracao = 12
+# err = 0
+
+###--####--####--####--####--##
+
+# infectados
+
 def f(x):
-  r = 4.92
-  pw = 1000
-  ps = 76.01
-  v = (math.pi * x*x)/3 * (3*r - x)
-  vs = 4/3 * math.pi * r*r*r
+  n = 190837139
+  lam = 1.41*(10**(-10))
+  return (n+1)/(1 + n * math.e**(-lam*(n+1)*x)) - (n/4)
 
-  return pw * (vs - v)- ps *vs
-
-a = 0
-b = 9.84
+inferior1 = 0
+superior1 = 1418
 numIteracao = 12
 err = 0
 
-###--####--####--####--####--##
+# ###--####--####--####--####--##
 
 #   ZERO DE FUNCAO
 #           METODO DA BISSECAO
@@ -344,4 +402,5 @@ def bissecao(a,b,f,err,numIteracao):
     print("Nao ha raiz neste intervalo!")
 
 if __name__ == "__main__":
-  bissecao(a,b,f,err,numIteracao)
+  #bissecao(a,b,f,err,numIteracao)
+  bissecao(inferior1, superior1, f, err, numIteracao)

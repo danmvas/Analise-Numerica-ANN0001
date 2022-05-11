@@ -141,8 +141,13 @@ def f(x):
 
   return pw * (vs - v)- ps *vs
 
+
+def df(x):
+  r = 4.92
+  return 1000 *math.pi * x * (x - 2 * r)
+
 x0 = 4.69
-numIteracao = 12
+numIteracao = 5
 
 
 ###--####--####--####--####--##

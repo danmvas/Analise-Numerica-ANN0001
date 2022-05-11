@@ -1,5 +1,10 @@
 import math
 
+#######################
+# ARQUIMEDES!
+# esse arquivo cospe a função a ser utilizada nos outros algoritmos
+
+
 r1 = 2.68
 r2 = 7.35
 H = 3.86
@@ -14,3 +19,6 @@ Vw = f'(({pi}*{Hdiff})/3.0)*({r3}**2)+({r2}**2) + {r3}*{r2})'
 F = f'{Pw}*{Vw} - {Pt}*{V}'
 
 print(F)
+
+
+##########################

@@ -85,12 +85,28 @@ import math
 #   return ((9.81/27.42)*x * (1 - exp(-(27.42/x)*9.58)) - 38.26);
 
 
-def f(x):
-  return 1 - (((145.29)**2)/9.81 * (7.53 * x + (x**2)/2)**3) * (7.53 + x)
+# def f(x):
+#   return 1 - (((145.29)**2)/9.81 * (7.53 * x + (x**2)/2)**3) * (7.53 + x)
 
-a = 0.8
-b = 9.73
-numIteracao = 11
+# a = 0.8
+# b = 9.73
+# numIteracao = 11
+
+################################
+# arquimedes come sfera yada ya 
+
+def f(x):
+  r = 4.92
+  pw = 1000
+  ps = 76.01
+  v = (math.pi * x*x)/3 * (3*r - x)
+  vs = 4/3 * math.pi * r*r*r
+
+  return pw * (vs - v)- ps *vs
+
+a = 0
+b = 9.84
+numIteracao = 9
 
 ###--####--####--####--####--##
 

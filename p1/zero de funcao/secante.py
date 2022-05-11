@@ -79,12 +79,26 @@ import math
 
 ###--####--####--####--####--##
 
-def f(x):
-  return 1586191*(math.e)**x + (219635/x)*(math.e**(x)-1) - 3406533
+# def f(x):
+#   return 1586191*(math.e)**x + (219635/x)*(math.e**(x)-1) - 3406533
 
-x0 = 0.1
-x1 = 1.46
+# x0 = 0.1
+# x1 = 1.46
+# numIteracao = 5
+
+def f(x):
+  r = 4.92
+  pw = 1000
+  ps = 76.01
+  v = (math.pi * x*x)/3 * (3*r - x)
+  vs = 4/3 * math.pi * r*r*r
+
+  return pw * (vs - v)- ps *vs
+
+x0 = 1.63
+x1 = 7.4
 numIteracao = 5
+err = 0
 
 ###--####--####--####--####--##
 

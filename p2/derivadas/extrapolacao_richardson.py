@@ -22,7 +22,7 @@ def richardson(col1):
 #    return x ** x
 
 # def g(x):
-#    return math.cos(2**x)askfjaslkfjasf
+#    return math.cos(2**x)askfjaslkfjasfaaaa
 
 #--------------------------------------------------------------------------
 #EX 42

@@ -119,14 +119,31 @@ import math
 
 # QUESTÃO ESCROTA DA ÁGUA
 
+# def f(x):
+#   return 8.11 - math.sqrt(2*9.81*x) * math.tanh(((math.sqrt(2*9.81*x))/(2*8.74))*5.49)
+
+# def df(x):
+#   return - (3* math.sqrt(109)* math.tanh((1647*math.sqrt(109)*math.sqrt(x))/(2185*2**(5/2))))/(5*2**(3/2)*math.sqrt(x)) - (538569 * (1/(math.cosh((1647*math.sqrt(109)*math.sqrt(x))/(2185* 2**(5/2)))))**2)/174800
+
+# numIteracao = 5
+# x0 = 1.86
+
+###--####--####--####--####--##
+
+# QUESTAO DA ESFERA REEEEEEEE
+
 def f(x):
-  return 8.11 - math.sqrt(2*9.81*x) * math.tanh(((math.sqrt(2*9.81*x))/(2*8.74))*5.49)
+  v = 57.55
+  r = 3.17
+  return math.pi*(x**2)*((3*r - x)/3) - v
 
 def df(x):
-  return - (3* math.sqrt(109)* math.tanh((1647*math.sqrt(109)*math.sqrt(x))/(2185*2**(5/2))))/(5*2**(3/2)*math.sqrt(x)) - (538569 * (1/(math.cosh((1647*math.sqrt(109)*math.sqrt(x))/(2185* 2**(5/2)))))**2)/174800
+  v = 57.55
+  r = 3.17
+  return (2*math.pi * (3*r - x)*x)/3 - (math.pi * x**2)/3
 
 numIteracao = 5
-x0 = 1.86
+x0 = 1.71
 
 ###--####--####--####--####--##
 

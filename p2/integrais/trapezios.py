@@ -1,5 +1,6 @@
 
 import math
+from re import sub
 
 #   INTEGRAIS
 #           REGRA DOS TRAPEZIOS
@@ -14,6 +15,29 @@ def trapezio(f, a, b, n):
    soma += (f(a) + f(b))
    soma *= (h / 2)
    return soma
+
+#--------------------------------------------------------------------------
+
+# intervalo = [-1.545, 1.805]
+# subintervalos = [4, 10, 27, 62, 76, 109, 214, 311, 528, 998, 4687, 8092]
+# n = [4,10,27,62,76,109,214,311,528,998,4687,8092]
+
+x = [1.521, 3.501, 3.834, 3.911, 4.437, 4.46, 4.645]
+y = [2.227, 2.776, 1.78, 1.512, 1.663, 1.77, 2.654]
+subintervalos = 6
+   
+def f(x):
+   return math.e**(-x**2)
+
+if __name__ == "__main__":
+   sum = 0.0
+   # for i in range(len(subintervalos)):
+   #    print(subintervalos[i],trapezio(f,intervalo[0],intervalo[1],subintervalos[i]))
+   for i in range(len(x)-1):
+      sum += trapezio(f,x[i],x[i+1],subintervalos)
+   print(sum)
+
+#--------------------------------------------------------------------------
 
 # def f(x):
 #    return math.exp(-x**2)
@@ -51,13 +75,4 @@ def trapezio(f, a, b, n):
 # x = [0.618, 0.696, 0.797, 1.742, 1.892, 2.171, 2.442, 2.644, 2.753, 2.807, 2.903, 2.973, 3.15, 3.875, 4.046, 4.053, 4.142, 4.3, 4.445, 4.629, 4.832]
 #--------------------------------------------------------------------------
 
-if __name__ == "__main__":
-   #print(trapezio(f,a,b,n))
-   sum = 0.0
-   #for i in range(len(subintervalos)):
-   #   print(subintervalos[i],trapezio(f,a,b,subintervalos[i]))
-   for i in range(len(x)-1):
-      sum += trapezio(f,x[i],x[i+1],subintervalos)
-   #for i in range(len(x)):
-   #   print(x[i], y[i])
-   print(sum)
+

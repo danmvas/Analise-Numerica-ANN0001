@@ -85,12 +85,35 @@ import math
 #   return ((9.81/27.42)*x * (1 - exp(-(27.42/x)*9.58)) - 38.26);
 
 
-def f(x):
-  return 1 - (((145.29)**2)/9.81 * (7.53 * x + (x**2)/2)**3) * (7.53 + x)
+# def f(x):
+#   return 1 - (((145.29)**2)/9.81 * (7.53 * x + (x**2)/2)**3) * (7.53 + x)
 
-a = 0.8
-b = 9.73
-numIteracao = 11
+# a = 0.8
+# b = 9.73
+# numIteracao = 11
+
+
+# def f(x):
+#   g = 9.81
+#   q = 145.29
+#   A = 7.53*x + ((x*x)/2)
+#   B = 7.53 + x
+#   return 1 - (((q*q)/(g*(A*A*A))))*B
+
+# a = 0.8
+# b = 9.73
+# numIteracao = 11
+
+###--####--####--####--####--##
+
+def f(x):
+  v = 57.55
+  r = 3.17
+  return math.pi*(x**2)*((3*r - x)/3) - v
+
+a = 0
+b = 6.34
+numIteracao = 12
 
 ###--####--####--####--####--##
 
@@ -100,17 +123,17 @@ numIteracao = 11
 def metodoFalsaPosicao(a, b, f, numIteracao):
   fa = f(a)
   fb = f(b)
-  print("Calcular metodo da posição falsa !!\n\n")
+  print("Calcular metodo da posição falsa !!\n")
   if (fa * fb >= 0):
-    print("Não sabe-se se a função possui raiz no intervalo [{},{}]\n".format(a,b))
+    print("Não sabe-se se a função possui raiz no intervalo [{},{}]".format(a,b))
     return False
   else:
     for i in range(numIteracao):
       x = (a*fb - b*fa)/(fb - fa)
-      print("x_{} = {}\n".format(i + 1,x))
+      print("x_{} = {}".format(i + 1,x))
       fx = f(x)
       if(fx == 0):
-        print("A raiz é {}\n".format(x))
+        print("\nA raiz é {}\n".format(x))
         return
       if (fa * fx < 0):
         b = x

@@ -18,16 +18,16 @@ def metodoGaussSeidel(matriz,ti,chute,numIteracao):
           xi -= matriz[i][j] * chute[j]
       xi /= matriz[i][i]
       chute[i] = xi
-    if it == 1 or it == 6 or it == 17:
-      print("X^{} -> ".format(it+1))
-      for k in range(coluna):
-        print("{}".format(chute[k]))
-      print("")
+    #if it == 1 or it == 6 or it == 17:
+    print("X^{} -> ".format(it+1))
+    for k in range(coluna):
+      print("{}".format(chute[k]))
+    print("")
 
 if __name__ == "__main__":
-  # A = [[9.92398, 4.56492, -3.81009], [0.50034, 2.07938, 0.03008], [2.15027, 0.9574, -4.65664]]
-  # B = [-0.98735, 2.34167, 0.56992]
-  # chute = [1.07522, 2.65208, 3.90839]
-  # n=18
+  A = [[1, -1,0], [-45.82,-62.28,-75.75], [0,1,-1]]
+  B = [- 318.2694, - 510.42960000000005, - 683.2089000000001]
+  chute = [0,0,0]
+  n=1
 
   metodoGaussSeidel(A,B,chute,n)

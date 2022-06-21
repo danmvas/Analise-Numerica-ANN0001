@@ -1,4 +1,4 @@
-import random
+# import random
 import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,7 +8,6 @@ def prod(lst):
    for i in lst:
       p *= i
    return p
-
 
 def diferenca_finita(xs, ordem, x0, f):
    a = []
@@ -36,6 +35,27 @@ def diferenca_finita(xs, ordem, x0, f):
 
 
 if __name__ == "__main__":
+   x0 = 7.7871
+   x = [7.5402, 7.7025, 7.7641, 7.8701, 7.9322, 7.971]
+   ordem = 3
+   
+   def f(x):
+      return 3 * math.cos((x**2-1)**(1/3))
+
+#--------------------------------------------------------------------------
+
+   r = diferenca_finita(x, ordem, x0, f)
+   #print(xs)
+   print(f'aproximacao para a derivada de ordem {ordem} de f no ponto {x0} = ', r)
+
+#--------------------------------------------------------------------------
+#EX P2.4
+   # def f(x):
+   #    return math.e**(math.cos(x)**2) + math.e**-(x**2) + math.log(x)
+
+   # x0 = 6.1647262
+   # xs = [5.1647262, 5.4147262, 5.6647262, 5.9147262, 6.1647262, 6.4147262, 6.6647262, 6.9147262]
+   # ordem = 2
 
    # def f(x):
    #    return x ** x
@@ -121,16 +141,3 @@ if __name__ == "__main__":
    # xs = [-1.7521145, -0.9376508, -0.2205482, 0.3958326, 1.0063393, 1.167232, 1.715525, 2.7313112, 3.2559937, 3.4786855, 4.4160535, 5.0114676, 5.6678806, 5.8725373, 6.6346092]
    # ordem = 5
 #--------------------------------------------------------------------------
-#--------------------------------------------------------------------------
-#EX P2.4
-   def f(x):
-      return math.e**(math.cos(x)**2) + math.e**-(x**2) + math.log(x)
-
-   x0 = 6.1647262
-   xs = [5.1647262, 5.4147262, 5.6647262, 5.9147262, 6.1647262, 6.4147262, 6.6647262, 6.9147262]
-   ordem = 2
-#--------------------------------------------------------------------------
-
-   r = diferenca_finita(xs, ordem, x0, f)
-   #print(xs)
-   print(f'aproximacao para a derivada de ordem {ordem} de f no ponto {x0}', r)

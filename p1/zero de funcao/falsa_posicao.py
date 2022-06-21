@@ -116,6 +116,7 @@ b = 6.34
 numIteracao = 12
 
 ###--####--####--####--####--##
+###--####--####--####--####--##
 
 #   ZERO DE FUNCAO
 #           METODO DA POSICAO FALSA

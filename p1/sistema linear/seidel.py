@@ -18,7 +18,7 @@ def metodoGaussSeidel(matriz,ti,chute,numIteracao):
           xi -= matriz[i][j] * chute[j]
       xi /= matriz[i][i]
       chute[i] = xi
-    #if it == 1 or it == 6 or it == 17:
+    #if it == 2 or it == 8 or it == 16:
     print("X^{} -> ".format(it+1))
     for k in range(coluna):
       print("{}".format(chute[k]))

@@ -352,4 +352,5 @@ def bissecao(a,b,f,err,numIteracao):
     print("Nao ha raiz neste intervalo!")
 
 if __name__ == "__main__":
-  bissecao(a,b,f,err,numIteracao)
+  #bissecao(a,b,f,err,numIteracao)
+  bissecao(inferior1, superior1, f, err, numIteracao)

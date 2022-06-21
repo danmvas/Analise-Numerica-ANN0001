@@ -1,5 +1,11 @@
 import math
 
+############################
+# esse aqui são coisas que eu encontrei perdidas que são refrentes a prova
+# a primeira é sobre infectados, a segunda é sobre empuxo
+# (eu acho????)
+
+
 lambida = 1.41 * 10**(-10)
 n = 152224869
 infectados = n*(1/4)

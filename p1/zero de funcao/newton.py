@@ -142,6 +142,7 @@ def df(x):
   r = 3.17
   return (2*math.pi * (3*r - x)*x)/3 - (math.pi * x**2)/3
 
+x0 = 2.56
 numIteracao = 5
 x0 = 1.71
 

@@ -36,6 +36,7 @@ if __name__ == '__main__':
         # print(i, order)
         cols = [F1(h/2**i) for i in range(2, 3)]
         aprox = richardson(cols)
+        
         print(f'{aprox}')
 
     print('=================')

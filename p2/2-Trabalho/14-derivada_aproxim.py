@@ -14,7 +14,7 @@ def richardson(col_1):
 
 
 if __name__ == '__main__':
-    approximations = [-4.5041115928877105, -4.584891462030413, -4.618803610363244, -4.634224646910582, -4.641562507757044, -4.645139685871754]
+    approximations = [6.649229394274858, 6.898304178773781, 6.929288092976677, 6.9191375663494625, 6.907440080149172, 6.899914582338738]
 
     new_value = richardson(approximations.copy())
     aprox = richardson(approximations + [new_value])

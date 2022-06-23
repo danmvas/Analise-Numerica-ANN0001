@@ -90,7 +90,13 @@ n1 = 37
 n2 = 16
 #--------------------------------------------------------------------------
 
+def f(x,y):
+   return math.e ** (-(x+y)**2)
 
+intervalo1 = [-1.15, 0.694]
+intervalo2 = [-0.974, 0.95]
+n1 = 8
+n2 = 7
 
 if __name__ == "__main__":
    res=double_trapezio(f, intervalo1[0], intervalo1[1],intervalo2[0], intervalo2[1], n1, n2)
